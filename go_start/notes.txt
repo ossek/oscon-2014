@@ -1,0 +1,78 @@
+ - hugo static site generator (about 1000 times faster than jekyll)
+ - 2nd only to jekyll
+ - second most contributors behind docker
+
+schedule
+ - introduce go lang
+ - introduce tools and libs
+ - build application
+
+slides online
+
+ - see rob pike's talk about language design decisions
+ - see Effective Go
+ - go run builds and executes binary simultaneously
+
+ - go fmt formats automatically
+  - can also refactor code https://spf13.com/post/go-fmt
+
+ - go is statically built (all dependencies are built into the binary)
+  - larger builds than c
+
+ - go test
+  - combine with 'looper' for realtime feedback
+  - go test ./...
+
+ - write planet
+
+ - cobra package cli
+ 
+ - go import removes extraneous imports
+  - go install import 
+
+ - for go get with versioning, use gopkg.in to pull from branch or tag
+
+ - := is for first time assignment / initialization, = is for assignment
+  - beware accidentally shadowing a variable in outer scope by using :=
+
+ - last statement of an if is the conditional.  we can do things before that 
+  (ie set up variables) for use in scope of the if statement
+
+ - viper package
+----------
+
+ - go has named types. can have methods declared on it.  non an alias.  explicit type
+ - go as slices and arrays
+  - arrays are fixed length, at definition time
+  - slice is dynamic (array-based).  can be thought of a view of an array
+  - slice is the core data structure in go for lists of data
+
+Ways to make things
+ - new allocates new ZEROED type. it's initalized to default value, not uninitialized
+  - also returns pointer to it
+
+ - make is for special reference types, initialized/allocated, but not ZEROED
+  - does not return pointer (because its for reference types where reference types are kind of like pointers)
+
+ - composite literals very common, 'pseudo-constructor', creates new value each time evaluated
+
+ - no constructors.  use composite literals where possible, if initialization needed,
+  use a factory
+  - also can use new with type (most packages expose a new for types),
+    if they require initialization
+
+Goroutine
+ - not a thread, coroutine, or process
+  - maybe a special type of coroutine
+
+ - channels are fundamentally a way to communicate between goroutines
+ - great talk on channels given at gohpercon (see slide 118)
+ 
+ - does not spawn a thread or process per go routine.  the go runtime 
+  will use a scheduler to do time slicing to execute many of them
+ - 1000 goroutines will not tax the cpu
+ - francesc flores has run 100 million and it worked
+
+go does not have generics, but has marshalling and reflection
+
+find examples of go package usage with go search

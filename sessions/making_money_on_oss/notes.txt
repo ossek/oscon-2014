@@ -1,0 +1,47 @@
+Patrick McFadin
+slideshare
+ - chief evangelist for cassandra, works at datastax
+ - not all oss is floss, but they very often go together
+ 
+ - why would someone buy oss?
+  - ski slope is a good analogy 
+   - lift ticket, hiking, groomed snow 
+   - services, usage etc.
+
+ - see slides for comparison of licenses (tldrlegal.com)
+  - restrictives gplv2 gplv3 agpl
+  - permissive apache, bsd, mit
+
+ - business models
+  - support, consulting, training
+   - valuation is very tricky (only the people)
+  - product
+   - real value, and value back to community
+   - add features,tooling, commercial extensions and tooling to an oss product
+   - dual license: (oracle agpl or commercial)
+                   - mysql
+  - embedded revenue (like mozilla) 
+    - google pays to put in a firefox search bar
+  - don't hurt small teams, build things large organizations will pay for
+
+ - pitfalls
+  - SugarCRM -- eg of crippleware (buy commercial license for the good stuff)
+  - or you can only use x amount of...
+
+  - lesson: Eucalyptus Systems abandons its community
+
+ - Competing with commercial alternatives
+   - take the high road
+   - if commercial solutions try to use fear, counter with, 'you can look at the proof in the source code'
+     - or 'look at our issue tracker'
+
+ - selling:
+   - make salespeople better community members
+
+ - know that some will never buy
+
+ - pick license carefuuly
+ - product over services
+ - be good to your community
+
+- strong community is antidote for commercial trying to fork and take off with it
